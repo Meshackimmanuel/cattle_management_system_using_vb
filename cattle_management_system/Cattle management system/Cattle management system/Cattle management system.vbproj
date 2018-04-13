@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BFF30FDF-07EC-4AE2-BF00-AB4902CC1F13}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Cattle_management_system.My.MyApplication</StartupObject>
+    <RootNamespace>Cattle_management_system</RootNamespace>
+    <AssemblyName>Cattle management system</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Cattle management system.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Cattle management system.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>Off</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.Designer.vb">
+      <DependentUpon>about.vb</DependentUpon>
+    </Compile>
+    <Compile Include="about.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CrystalReport-breeding.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport-breeding.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport-cattle.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport-cattle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport-milking.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport-milking.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport-pasture.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport-pasture.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport-purchase.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport-purchase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport-sales.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport-sales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="delete_breeding.Designer.vb">
+      <DependentUpon>delete_breeding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="delete_breeding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_cattle.Designer.vb">
+      <DependentUpon>delete_cattle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="delete_cattle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_milking.Designer.vb">
+      <DependentUpon>delete_milking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="delete_milking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_pasture.Designer.vb">
+      <DependentUpon>delete_pasture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="delete_pasture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_purchase.Designer.vb">
+      <DependentUpon>delete_purchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="delete_purchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_sales.Designer.vb">
+      <DependentUpon>delete_sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="delete_sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display_breeding.Designer.vb">
+      <DependentUpon>display_breeding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="display_breeding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display_milking.Designer.vb">
+      <DependentUpon>display_milking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="display_milking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display_sales.Designer.vb">
+      <DependentUpon>display_sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="display_sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display_cattle.Designer.vb">
+      <DependentUpon>display_cattle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="display_cattle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display_pasture.Designer.vb">
+      <DependentUpon>display_pasture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="display_pasture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display_purchase.Designer.vb">
+      <DependentUpon>display_purchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="display_purchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_menu.Designer.vb">
+      <DependentUpon>Frm_menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_breeding.Designer.vb">
+      <DependentUpon>insert_breeding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insert_breeding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_cattle.Designer.vb">
+      <DependentUpon>insert_cattle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insert_cattle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_milking.Designer.vb">
+      <DependentUpon>insert_milking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insert_milking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_pasture.Designer.vb">
+      <DependentUpon>insert_pasture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insert_pasture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_purchase.Designer.vb">
+      <DependentUpon>insert_purchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insert_purchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_sales.Designer.vb">
+      <DependentUpon>insert_sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insert_sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.vb">
+      <DependentUpon>main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="register.Designer.vb">
+      <DependentUpon>register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report-cattle.Designer.vb">
+      <DependentUpon>report-cattle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="report-cattle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_breeding.Designer.vb">
+      <DependentUpon>report_breeding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="report_breeding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_milking.Designer.vb">
+      <DependentUpon>report_milking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="report_milking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_pasture.Designer.vb">
+      <DependentUpon>report_pasture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="report_pasture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_purchase.Designer.vb">
+      <DependentUpon>report_purchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="report_purchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_sales.Designer.vb">
+      <DependentUpon>report_sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="report_sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search_breeding.Designer.vb">
+      <DependentUpon>search_breeding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="search_breeding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search_cattle.Designer.vb">
+      <DependentUpon>search_cattle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="search_cattle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search_milking.Designer.vb">
+      <DependentUpon>search_milking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="search_milking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search_pasture.Designer.vb">
+      <DependentUpon>search_pasture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="search_pasture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search_purchase.Designer.vb">
+      <DependentUpon>search_purchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="search_purchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search_sales.Designer.vb">
+      <DependentUpon>search_sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="search_sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_breeding.Designer.vb">
+      <DependentUpon>update_breeding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="update_breeding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_cattle.Designer.vb">
+      <DependentUpon>update_cattle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="update_cattle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_milking.Designer.vb">
+      <DependentUpon>update_milking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="update_milking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_pasture.Designer.vb">
+      <DependentUpon>update_pasture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="update_pasture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_purchase.Designer.vb">
+      <DependentUpon>update_purchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="update_purchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_sales.Designer.vb">
+      <DependentUpon>update_sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="update_sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="welcome.Designer.vb">
+      <DependentUpon>welcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="welcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="about.resx">
+      <DependentUpon>about.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport-breeding.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport-breeding.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport-cattle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport-cattle.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport-milking.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport-milking.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport-pasture.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport-pasture.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport-purchase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport-purchase.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport-sales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport-sales.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_breeding.resx">
+      <DependentUpon>delete_breeding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_cattle.resx">
+      <DependentUpon>delete_cattle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_milking.resx">
+      <DependentUpon>delete_milking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_pasture.resx">
+      <DependentUpon>delete_pasture.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_purchase.resx">
+      <DependentUpon>delete_purchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_sales.resx">
+      <DependentUpon>delete_sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="display_breeding.resx">
+      <DependentUpon>display_breeding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="display_cattle.resx">
+      <DependentUpon>display_cattle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="display_milking.resx">
+      <DependentUpon>display_milking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="display_pasture.resx">
+      <DependentUpon>display_pasture.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="display_purchase.resx">
+      <DependentUpon>display_purchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="display_sales.resx">
+      <DependentUpon>display_sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_menu.resx">
+      <DependentUpon>Frm_menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_breeding.resx">
+      <DependentUpon>insert_breeding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_cattle.resx">
+      <DependentUpon>insert_cattle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_milking.resx">
+      <DependentUpon>insert_milking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_pasture.resx">
+      <DependentUpon>insert_pasture.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_purchase.resx">
+      <DependentUpon>insert_purchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_sales.resx">
+      <DependentUpon>insert_sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register.resx">
+      <DependentUpon>register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report-cattle.resx">
+      <DependentUpon>report-cattle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_breeding.resx">
+      <DependentUpon>report_breeding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_milking.resx">
+      <DependentUpon>report_milking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_pasture.resx">
+      <DependentUpon>report_pasture.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_purchase.resx">
+      <DependentUpon>report_purchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_sales.resx">
+      <DependentUpon>report_sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_breeding.resx">
+      <DependentUpon>search_breeding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_cattle.resx">
+      <DependentUpon>search_cattle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_milking.resx">
+      <DependentUpon>search_milking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_pasture.resx">
+      <DependentUpon>search_pasture.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_purchase.resx">
+      <DependentUpon>search_purchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_sales.resx">
+      <DependentUpon>search_sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_breeding.resx">
+      <DependentUpon>update_breeding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_cattle.resx">
+      <DependentUpon>update_cattle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_milking.resx">
+      <DependentUpon>update_milking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_pasture.resx">
+      <DependentUpon>update_pasture.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_purchase.resx">
+      <DependentUpon>update_purchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_sales.resx">
+      <DependentUpon>update_sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcome.resx">
+      <DependentUpon>welcome.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-button-png-hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-Button_png.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
